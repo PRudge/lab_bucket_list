@@ -7,7 +7,8 @@ const BucketList = function (url) {
 };
 
 BucketList.prototype.bindEvents = function () {
-  PubSub.subscribe("ResultView: delete", (evt) => {
+  PubSub.subscribe('ItemView:delete-click', (evt) => {
+
     this.deleteItem(evt.detail);
   });
   // PubSub.subscribe("ResultView: tick", (evt) => {

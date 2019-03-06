@@ -8,8 +8,10 @@ this.element = element;
 ResultView.prototype.bindEvents = function () {
 PubSub.subscribe("BucketList:items-loaded",(items)=>{
 const itemsAry =  items.detail;
+this.element.innerHTML = '';
 this.render(itemsAry)
 });
+
 }
 
 ResultView.prototype.render = function (itemsAry) {
