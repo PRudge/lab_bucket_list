@@ -14,6 +14,7 @@ BucketList.prototype.bindEvents = function () {
   //   this.editItem(evt.detail);
   // });
   PubSub.subscribe("FormView: submit", (evt) => {
+    console.log(evt.detail);
     this.saveItem(evt.detail);
   });
 };
@@ -28,8 +29,11 @@ this.request.get()
 }
 
 BucketList.prototype.saveItem = function (docObject) {
+console.log("pre post");
 this.request.post(docObject)
 .then((items) => {
+  console.log("in saveItem");
+  console.log(docObject);
   PubSub.publish("BucketList:items-loaded", items)
 })
 .catch(console.error)

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const formView = new FormView(formElement);
   formView.bindEvents();
 
-  const  resultElement = document.querySelector("bucketlist-results");
+  const  resultElement = document.querySelector("#bucketlist-results");
   const resultView = new ResultView(resultElement);
   resultView.bindEvents();
 

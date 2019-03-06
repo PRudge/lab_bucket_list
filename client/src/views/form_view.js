@@ -12,8 +12,10 @@ FormView.prototype.bindEvents = function () {
       "location":evt.target.item_location.value,
       "image_url":evt.target.item_image.value
     });
-    evt.target.reset();
+  
   });
 };
+
+
 
 module.exports = FormView;
