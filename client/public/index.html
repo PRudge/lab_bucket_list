@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Punting the Bucket</title>
+  <script src="/js/bundle.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel%7CEB+Garamond" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header><h1>Bucket List</h1></header>
+  <form id = "item-input">
+    <div>
+      <label for="item-bucketlist">Bucket List Item:</label>
+      <input type="text" id="item-bucketlist"/>
+    </div>
+    <div>
+      <label for="item-location">Location:</label>
+      <input type="text" id="item-location"/>
+    </div>
+    <div>
+      <label for="item-image">Image:</label>
+      <input type="text" id="item-image"/>
+    </div>
+    <div>
+      <label for="item-date">Date:</label>
+      <input type="date" id="item-date"/>
+    </div>
+    <input type="submit" value="Save" id="save"/>
+    <input type="reset" value="reset" id="reset"/>
+  </form>
+
+  <div id = "bucketlist-results"></div>
+
+</body>
