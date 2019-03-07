@@ -3,18 +3,21 @@ db.dropDatabase();
 
 db.items.insertMany([
  {
-   bucket_item: "Visit Big Benl",
+   bucket_item: "Visit Big Ben",
    location: "London",
-   image_url: "test"
+   image_url: '/images/london.jpg',
+   completed: false
  },
  {
-   bucket_item: "Jump Off Forth Road Bridge",
-   location: "Queensferry",
-   image_url: "test"
+   bucket_item: "Stonehenge",
+   location: "England",
+   image_url: "/images/stonehenge.jpg",
+   completed: false
  },
  {
-   bucket_item: "Roll Cheese Down a Hill",
-   location: "Cheddar Gorge",
-   image_url: "test"
+   bucket_item: "Camino de Santiago",
+   location: "Spain",
+   image_url: "/images/caminodesantiago.jpg",
+   completed: false
  }
 ]);

@@ -8,14 +8,14 @@ const BucketList = function (url) {
 
 BucketList.prototype.bindEvents = function () {
   PubSub.subscribe('ItemView:delete-click', (evt) => {
-
     this.deleteItem(evt.detail);
   });
-  // PubSub.subscribe("ResultView: tick", (evt) => {
-  //   this.editItem(evt.detail);
-  // });
+
+  PubSub.subscribe('ItemView:update-click', (evt) => {
+    this.editItem(evt.detail);
+  });
+
   PubSub.subscribe("FormView: submit", (evt) => {
-    console.log(evt.detail);
     this.saveItem(evt.detail);
   });
 };
@@ -30,20 +30,22 @@ this.request.get()
 }
 
 BucketList.prototype.saveItem = function (docObject) {
-console.log("pre post");
 this.request.post(docObject)
 .then((items) => {
-  console.log("in saveItem");
-  console.log(docObject);
   PubSub.publish("BucketList:items-loaded", items)
 })
 .catch(console.error)
 
 };
 
-// BucketList.prototype.editItem = function () {
-//
-// };
+BucketList.prototype.editItem = function (docObject) {
+  console.log(docObject)
+  this.request.put(docObject._id, docObject)
+  .then((items) => {
+    PubSub.publish("BucketList:items-loaded", items)
+  })
+  .catch(console.error)
+  };
 
 BucketList.prototype.deleteItem = function (listId) {
 this.request.delete(listId)
@@ -52,8 +54,5 @@ this.request.delete(listId)
 })
 .catch(console.error)
 };
-
-
-
 
 module.exports = BucketList;

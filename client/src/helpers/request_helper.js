@@ -16,14 +16,16 @@ RequestHelper.prototype.post = function (payload) {
    .then((response) => response.json());
 };
 
-// RequestHelper.prototype.edit = function (id) {
-//   return fetch(`${this.url}/${id}`, {
-//     method: 'PUT'
-//     body: JSON.stringify(payload),
-//     headers: { 'Content-Type' : 'application/json'}
-//   })
-//     .then((response) => response.json());
-// }
+RequestHelper.prototype.put = function (id, payload) {
+
+  console.log(`${this.url}/${id}`)
+  return fetch(`${this.url}/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify(payload),
+    headers: { 'Content-Type' : 'application/json'}
+  })
+    .then((response) => response.json());
+}
 
 RequestHelper.prototype.delete = function (id) {
  return fetch(`${this.url}/${id}`, {

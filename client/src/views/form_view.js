@@ -10,9 +10,10 @@ FormView.prototype.bindEvents = function () {
     PubSub.publish("FormView: submit", {
       "bucket_item":evt.target.item_bucketlist.value,
       "location":evt.target.item_location.value,
-      "image_url":evt.target.item_image.value
+      "image_url":evt.target.item_image.value,
+      "completed":false
     });
-  
+
   });
 };
 
