@@ -1,40 +1,43 @@
 body {
-    font-family: "Roboto",sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight:200;
     background-color: #fafafa;
     color: #181818;
 }
 
 .header-title {
-    font-weight: normal;
+    font-weight: 300;
     text-align: center;
     padding: 5px;
     margin: 0;
-    /* color: #751636; */
     border-bottom: 1px solid #bfbfbf;
 }
 
-#bucketlist-results {
-    display: grid;
-    /* grid-template-columns: repeat(5, 1fr); */
-     justify-content: center;
+h3{
+  font-weight: 300;
+}
 
-    grid-template-columns: repeat(5, 200px);
-    /* grid-template-columns: repeat( auto-fit, minmax(180px, 1fr)); */
-    /* grid-auto-columns: 100px; */
-     grid-auto-rows: 400px;
-    /* grid-template-columns: repeat(5, 180px); */
+p{
+  font-weight: 200;
+}
+
+#bucketlist-results {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-auto-rows: 400px;
+  justify-content: center;
 }
 
 .item-div {
     grid-column: auto;
     grid-column-gap: 5px;
-    /* width:180px; */
+
     border-radius: 8px;
     background-color: white;
     box-shadow: 2px 2px 6px 0 rgba(123, 123, 123, 0.2);
     margin: 10px;
     padding: 0;
-    height: auto; /* makes sure all the image is displayed */
+    height: auto;
 }
 
 .item-div:hover {
@@ -42,17 +45,10 @@ body {
 }
 
 .item-wish {
-    /* color: #751636;
-    border-bottom: 1px solid #bfbfbf;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;*/
     text-align: center;
     padding: 5px;
     margin: 0;
     height: 50px;
-    /*font-size: 20px;
-    background-color: #e6e6e6;
-    height: 50px; */
 }
 
 .item-location {
@@ -77,4 +73,53 @@ button.delete-btn {
     display: block;
     max-height: 180px;
     max-width: 180px;
+}
+
+/* form */
+
+#item-input {
+	margin:10px auto;
+	padding: 20px 12px 10px 20px;
+	font-weight: 300;
+}
+
+label{
+	margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+}
+
+input[type=text], select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	outline: none;
+}
+input[type=text]:focus, select:focus{
+	-moz-box-shadow: 0 0 0.5em #605436;
+	-webkit-box-shadow: 0 0 0.5em #605436;
+	box-shadow: 0 0 0.5em #605436;
+	border: 1px solid #605436;
+}
+
+
+input[type=submit], input[type=reset]{
+	background: #751636;
+  margin-top: 0.625em;
+	padding: 0.5em 1em 0.5em 1em;
+	border: none;
+	color: #fff;
+}
+input[type=submit]:hover, input[type=reset]:hover{
+	background: #d0ab95;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+
+#item-input .required{
+	color:red;
 }

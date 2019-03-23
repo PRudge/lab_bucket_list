@@ -1,4 +1,5 @@
 const RequestHelper = function (url) {
+  // console.log(url)
   this.url = url;
 }
 
