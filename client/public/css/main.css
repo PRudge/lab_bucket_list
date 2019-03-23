@@ -1,58 +1,71 @@
-body {
-    font-family: 'Raleway', sans-serif;
-    font-weight:200;
-    background-color: #fafafa;
-    color: #181818;
+*{
+border: 0;
+padding: 0;
+margin: 0;
 }
 
-.header-title {
-    font-weight: 300;
-    text-align: center;
-    padding: 5px;
-    margin: 0;
-    border-bottom: 1px solid #bfbfbf;
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight:200;
+  background-color: #fafafa;
+  color: #45a2e8;
+  padding-top: 1.5em;
+  width: 100vw;
+  height: 100vh;
+}
+
+header{
+  text-align: center;
 }
 
 h3{
   font-weight: 300;
+  text-align: center;
+  padding: 5px;
+  margin: 0;
+  height: 50px;
 }
 
 p{
   font-weight: 200;
+  text-align: center;
+}
+
+footer{
+    background-color: #ffffff;
+    opacity: 80%;
+    margin-top: 100px;
+    padding: 10px;
 }
 
 #bucketlist-results {
   display: grid;
-  grid-template-columns: repeat(5, 200px);
-  grid-auto-rows: 400px;
+  grid-template-columns: repeat(5, 12.500em);
+  grid-auto-rows: 25em;
   justify-content: center;
 }
 
 .item-div {
-    grid-column: auto;
-    grid-column-gap: 5px;
-
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 2px 2px 6px 0 rgba(123, 123, 123, 0.2);
-    margin: 10px;
-    padding: 0;
-    height: auto;
+  grid-column: auto;
+  grid-column-gap: 5px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 2px 2px 6px 0 rgba(123, 123, 123, 0.2);
+  margin: 10px;
+  padding: 0;
+  height: auto;
 }
 
 .item-div:hover {
-    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
 }
 
 .item-wish {
-    text-align: center;
-    padding: 5px;
-    margin: 0;
-    height: 50px;
+
 }
 
 .item-location {
-    padding:5px;
+  padding:5px;
 }
 
 .delete-btn {
@@ -63,63 +76,96 @@ p{
 }
 
 button.delete-btn {
-    border: none;
-    padding: 0;
-    border-radius: 5px;
+  border: none;
+  padding: 0;
+  border-radius: 5px;
 }
 
 .item-image {
-    margin: 20px auto; /* puts image in middle horizontally */
-    display: block;
-    max-height: 180px;
-    max-width: 180px;
+  margin: 1.250em auto; /* puts image in middle horizontally */
+  display: block;
+  max-height: 11.250em;
+  max-width: 11.250em;
+  overflow: hidden;
 }
 
 /* form */
 
-#item-input {
-	margin:10px auto;
-	padding: 20px 12px 10px 20px;
-	font-weight: 300;
+#item-input{
+  margin: 20px;
+  max-width: 28.125em;
+  line-height: 1.5;
 }
 
 label{
-	margin:0 0 3px 0;
-	padding:0px;
-	display:block;
+  display:block;
+  margin-bottom: 10px;
+  color: #45a2e8;
+  font-weight: 300;
+  font-size: 1em;
+  text-shadow: 1px 1px 1px #fff;
 }
 
-input[type=text], select{
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	border:1px solid #BEBEBE;
-	padding: 7px;
-	margin:0px;
-	outline: none;
-}
-input[type=text]:focus, select:focus{
-	-moz-box-shadow: 0 0 0.5em #605436;
-	-webkit-box-shadow: 0 0 0.5em #605436;
-	box-shadow: 0 0 0.5em #605436;
-	border: 1px solid #605436;
+#item_bucketlist, #item_location, #item_image{
+  float: right;
+  width: 100px;
+  font-size: 1em;
 }
 
-
-input[type=submit], input[type=reset]{
-	background: #751636;
-  margin-top: 0.625em;
-	padding: 0.5em 1em 0.5em 1em;
-	border: none;
-	color: #fff;
-}
-input[type=submit]:hover, input[type=reset]:hover{
-	background: #d0ab95;
-	box-shadow:none;
-	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
+fieldset{
+  border-radius: 10px;
+  margin: 20px 0px 10px 0px;
+  border: 0px;
+  padding: 20px;
+  background: #fafafa;
+  -webkit-box-shadow: 0px 0px 6px 0 rgba(0,0,0,0.4);
+  box-shadow: 0px 0px 6px 0 rgba(0,0,0,0.4);
 }
 
-#item-input .required{
-	color:red;
+legend{
+  color: #45a2e8;
+  border-radius: 5px 5px 0px 0px;
+  background: #fafafa;
+  padding: 0px 8px 3px 8px;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+#item-input input[type=text]{
+  border-radius: 3px;
+  border: 0px;
+  /* border: 1px solid #45a2e8; */
+  font-weight: 300;
+  outline: none;
+  color: #002b6e;
+  padding: 5px 8px 5px 8px;
+  -webkit-box-shadow: inset 0px 0px 3px 0 rgba(0,0,0,0.4);
+  box-shadow: inset 0px 0px 3px 0 rgba(0,0,0,0.4);
+  background: #ffffff;
+  width:50%;
+}
+
+input[type=submit], input[type=reset]
+{
+  background: #45a2e8;
+  border: 1px solid #002b6e;
+  padding: 5px 15px 5px 15px;
+  color: #e7fff7;
+  -webkit-box-shadow: inset 5px 5px 15px 3px rgba(0,0,0,0.62);
+  box-shadow: inset 5px 5px 15px 3px rgba(0,0,0,0.62);
+  border-radius: 3px;
+  border-radius: 3px;
+  font-weight: 400;
+}
+
+input[type=submit]:hover, input[type=reset]:hover
+{
+  background: #e7fff7;
+  border: 1px solid #002b6e;
+  padding: 5px 15px 5px 15px;
+  color: #45a2e8;
+  box-shadow: inset -1px -1px 3px rgba(0,0,0,0.62);
+  border-radius: 3px;
+  border-radius: 3px;
+  font-weight: bold;
 }

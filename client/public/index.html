@@ -9,25 +9,23 @@
 </head>
 <body>
 
-  <h1 class = 'header-title'>Bucket List</h1>
+  <header><img src ="/images/bucket_list_logo.png" alt="bucketlist logo" width=450></header>
   <main>
-  <form id = "item-input">
-    <div>
-      <label for="item-bucketlist">Bucket List Item:</label>
-      <input type="text" id="item_bucketlist"/>
-    </div>
-    <div>
-      <label for="item-location">Location:</label>
-      <input type="text" id="item_location"/>
-    </div>
-    <div>
-      <label for="item-image">Image:</label>
-      <input type="text" id="item_image"/>
-    </div>
-    <input type="submit" value="Save" id="save"/>
-    <input type="reset" value="reset" id="reset"/>
-  </form>
 
-  <div id = "bucketlist-results"></div>
-</main>
+    <form id = "item-input" autocomplete="off">
+      <fieldset><legend>Add a Trip</legend>
+        <label for="item_bucketlist">Bucket List Item:<input type="text" id="item_bucketlist"/></label>
+        <label for="item_location">Location:<input type="text" id="item_location"/></label>
+        <label for="item_image">Image:<input type="text" id="item_image"/></label>
+
+      </fieldset>
+      <input type="submit" value="save" id="save"/>
+      <input type="reset" value="reset" id="reset"/>
+
+    </form>
+
+    <div id = "bucketlist-results"></div>
+  </main>
+  
+  <footer><p class="copyright">© myBucketList 2019</p></footer>
 </body>
