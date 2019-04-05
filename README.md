@@ -46,7 +46,7 @@ npm run build
 
 In atom, right click on index.html and choose 'open in browser', the website will now be visible.
 
-#### Screenshot of Beer API website
+#### Screenshot of Bucket List App
 
 ![](images/bucket_list_screen_shot.jpg)
 
